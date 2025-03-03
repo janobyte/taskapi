@@ -103,7 +103,7 @@ def test_create_task_whitespace_title():
 
 # title string is too long
 def test_create_task_long_title():
-    long_title = "c" * 51 # char limit is 50
+    long_title = "c" * 51  # char limit is 50
     task_data = {
         "title": long_title,
         "description": "Task with a very long title",

@@ -23,14 +23,15 @@ class Tags(Enum):
 
 # manages context when to execute each code block based on yield split
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(app):
     # startup code happens before yield
     create_db_and_tables()
     yield
     # cleanup code happens after yield
 
 
-# ensures we use a single session per request (yield gives control to route, then cleans up session implicitly)
+# ensures we use a single session per request
+# (yield gives control to route, then cleans up session implicitly)
 def get_session():
     with Session(engine) as session:
         yield session
@@ -85,7 +86,7 @@ def get_tasks(
     status_code=status.HTTP_201_CREATED,
 )
 def create_task(task: TaskCreate, session: SessionDep):
-    if not task.title.strip(): # generally each string should be stripped to begin with
+    if not task.title.strip():  # generally each string should be stripped to begin with
         raise HTTPException(
             status_code=422, detail="Title cannot be empty or whitespace"
         )

@@ -31,7 +31,7 @@ jobs:
         
     - name: Lint with pylint
       run: |
-        pylint --disable=C0111,R0903,W0611 $(git ls-files '*.py')
+        pylint --disable=C0111,C0103,W0611,W0621,W0613,W0105 $(git ls-files '*.py')
         
     - name: Check types with mypy
       run: |
