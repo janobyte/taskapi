@@ -151,6 +151,7 @@ Pylint & black were annoying to develop with, especially with VSCode extensions.
 - Finish setting up AWS & Postgres.
 - Figure out dev/stage/prod DBs.
 - Automate deployments.
+- Full test coverage (+ upload/display cov)
 
 **And obviously,**
 - Build an actual API :D
