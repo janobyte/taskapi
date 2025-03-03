@@ -24,7 +24,7 @@ Ensure you have the following installed:
 - [Git](https://git-scm.com/)
 - [Python](https://www.python.org/)
 
-## Clone the Repository
+### Clone the Repository
 
 ```sh
 git clone https://github.com/janobyte/taskapi.git
