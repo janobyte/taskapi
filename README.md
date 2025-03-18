@@ -8,7 +8,9 @@
 
 a simple Task Management CRUD RESTful API.
 
-**[Docs](http://3.68.113.178/docs)** are currently running on a direct IP address (and http only) on an ECS instance until my DNS propagates properly and I can set it up again.
+~~**[Docs](http://3.68.113.178/docs)** are currently running on a direct IP address (and http only) on an ECS instance until my DNS propagates properly and I can set it up again.~~
+
+Docs down ECS is too expensive.
 
 ## v2
 
